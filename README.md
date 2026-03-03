@@ -1,88 +1,61 @@
-# AI Lead Scoring & Auto-Reply System
+AI Lead Scoring & Auto-Reply System
 
-## Status
+Status
 
 Working prototype — designed as a portfolio project demonstrating practical AI workflow automation for real-world business use cases.
 
 This system showcases structured LLM integration, automated lead qualification logic, spreadsheet-based workflow orchestration, and state-controlled processing.
 
----
-
-## Overview
+Overview
 
 This project automates inbound lead qualification using:
-
-- Google Sheets
-- Google Apps Script
-- LLM API (OpenAI-compatible endpoint)
+ • Google Sheets
+ • Google Apps Script
+ • LLM API (OpenAI-compatible endpoint)
 
 The system:
-
-- Analyzes incoming leads
-- Scores buying intent (1–10)
-- Assigns priority (Low / Medium / High)
-- Categorizes the inquiry
-- Generates a professional suggested reply
-- Writes structured output back into the spreadsheet
-- Tracks processing status and timestamps
+ • Analyzes incoming leads
+ • Scores buying intent (1–10)
+ • Assigns priority (Low / Medium / High)
+ • Categorizes the inquiry
+ • Generates a professional suggested reply
+ • Writes structured output back into the spreadsheet
+ • Tracks processing status and timestamps
 
 It reduces manual review time and improves response prioritization.
 
----
+Core Features
+ • Automated lead scoring (1–10 scale)
+ • Priority classification (Low / Medium / High)
+ • Inquiry categorization (Sales, Support, Partnership, Spam, Other)
+ • AI-generated professional reply suggestions
+ • Structured JSON extraction from LLM response
+ • Status-based workflow control (PROCESSING / DONE / ERROR)
+ • Timestamp logging for processed leads
+ • Basic parsing error handling
 
-## Problem It Solves
+Technologies Used
+ • Google Sheets
+ • Google Apps Script (JavaScript runtime)
+ • LLM API (OpenAI-compatible endpoint)
+ • JSON parsing and structured outputs
+ • Prompt engineering
+ • Workflow state management logic
+ • HTTP API integration (UrlFetchApp)
 
-Businesses often receive inbound messages that must be:
+Purpose of This Project
 
-- Reviewed manually
-- Categorized
-- Prioritized
-- Replied to individually
+This repository demonstrates:
+ • Practical AI integration into real-world business workflows
+ • Structured LLM response handling and validation
+ • Spreadsheet-based automation architecture
+ • End-to-end API communication with state control
+ • System design thinking applied to workflow automation
 
-This repetitive process slows down response time and increases the risk of missing high-intent leads.
+Built as a portfolio-ready AI workflow automation project.
 
-This system automates that workflow using structured AI analysis.
+Example Input
 
----
-
-## How It Works
-
-1. New leads are added to a Google Sheet.
-2. The Apps Script scans for rows without a completed status.
-3. The script constructs a structured AI prompt.
-4. Lead data is sent to an LLM API.
-5. The model returns structured JSON.
-6. The script extracts and parses the JSON safely.
-7. The spreadsheet is updated with:
-   - Lead score
-   - Priority level
-   - Category
-   - Suggested reply
-   - Reasoning
-   - Timestamp
-   - Status (PROCESSING / DONE / ERROR)
-
-To ensure stability, the system processes one lead per execution cycle.
-
----
-
-## Architecture Flow
-
-User Input (Google Sheet)  
-→ Apps Script Trigger  
-→ Prompt Construction  
-→ LLM API Call  
-→ JSON Response Parsing  
-→ Structured Data Written Back to Sheet  
-→ Workflow Status Updated  
-
----
-
-## Example Input and Output
-
-
-```json
-## Example Input
 {
   "name": "John Smith",
   "email": "john@company.com",
@@ -91,7 +64,8 @@ User Input (Google Sheet)
   "message": "We are interested in automating our inbound customer requests and would like to know pricing and timeline."
 }
 
-## Example Output
+Example Output
+
 {
   "lead_score": 9,
   "priority": "High",
