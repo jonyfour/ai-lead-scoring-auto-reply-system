@@ -78,7 +78,7 @@ User Input (Google Sheet)
 
 ---
 
-## Example Input
+## Example Input and Output
 
 ```json
 {
