@@ -80,7 +80,9 @@ User Input (Google Sheet)
 
 ## Example Input and Output
 
+
 ```json
+## Example Input
 {
   "name": "John Smith",
   "email": "john@company.com",
