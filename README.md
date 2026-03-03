@@ -50,4 +50,3 @@ This helps businesses prioritize leads and respond faster.
 
 ---
 
-## Security Note
