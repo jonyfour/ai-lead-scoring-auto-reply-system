@@ -88,3 +88,12 @@ User Input (Google Sheet)
   "budget": "$5,000",
   "message": "We are interested in automating our inbound customer requests and would like to know pricing and timeline."
 }
+
+## Example Output
+{
+  "lead_score": 9,
+  "priority": "High",
+  "category": "Sales",
+  "reasoning": "Clear buying intent with defined budget and project scope.",
+  "suggested_reply": "Thank you for your inquiry. We'd be happy to discuss how we can automate your inbound requests. Could we schedule a short call this week?"
+}
